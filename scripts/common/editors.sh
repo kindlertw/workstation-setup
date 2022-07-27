@@ -7,6 +7,7 @@ echo "Installing editors"
 echo "Only installing Visual Studio Code and Vim by default"
 echo "Uncomment other editors and rerun if you want them"
 
+## Todo: Make this optional
 brew install --cask visual-studio-code
 brew install vim
 

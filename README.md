@@ -4,22 +4,7 @@ This project automates the process of setting up a new Mac OS X software develop
 
 ## Goals
 
-The primary goal of this project is to give people a simple script they can run to make their Mac OS X machine prepared and standardized for working on software development projects, especially those common at VMware Tanzu Labs.
-
-## Why did we do it this way?
-
- * A bash script is easy for users to edit locally on-the-fly for small temporary tweaks
- * Everything is in one repository
- * The project name is informative
- * It is easy to fork and customize
- * It has limited requirements: `git` and `bash` available on macOS by default
-
-## Anti-goals
-
-This project does not aim to do everything. Some examples:
-
- * We don't install everything that your project needs. These scripts should only install generally useful things, and prefer running quickly over being complete.
- * We avoid setting up and maintaining overly-custom configurations. When there is already a tool that will get us something in a conventional manner, such as [Oh My Zsh](https://ohmyz.sh/), we prefer to use it instead of doing things ourselves.
+The primary goal of this project is to give people a simple script they can run to make their Mac OS X machine prepared for the TW Launch Experience.
 
 ## Preparation
 
@@ -33,7 +18,7 @@ Open up `Terminal.app` and run the following command:
 ```sh
 mkdir -p ~/workspace &&
   cd ~/workspace &&
-  git clone https://github.com/pivotal/workstation-setup.git &&
+  git clone https://github.com/kindlertw/workstation-setup.git &&
   cd workstation-setup
 ```
 
@@ -75,29 +60,6 @@ To install any of these, add them as arguments to `$> setup.sh`. Examples:
 # Love those platforms!
 ./setup.sh golang docker kubernetes cloud-foundry terraform concourse
 ```
-
-## Analytics
-
-The tool will send anonymous user data to our Google Analytics account, so we can see what command line arguments are popular.  You can disable this:
-```
-# Remove unnecessary languages when running command
-SKIP_ANALYTICS=1 ./setup.sh java ruby node golang c docker
-```
-This will also disable brew's [data collection](https://github.com/Homebrew/brew/blob/master/docs/Analytics.md).
-
-## Having problems?
-
-If you're having problems using the setup script, please let us know by [opening an issue](https://github.com/pivotal/workstation-setup/issues/new).
-
-If you see errors from `brew`, try running `brew doctor` and include the diagnostic output in your issue submission.
-
-## Customizing
-
-If you'd like to customize this project for a project's use:
-
-- Fork the project
-- Edit the shells scripts to your liking
-- Profit
 
 ## Frequently Asked Questions and Troubleshooting
 _Q: Can I rerun `setup.sh`?_

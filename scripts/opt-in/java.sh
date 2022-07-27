@@ -1,5 +1,6 @@
 echo
 echo "Installing most recent version of OpenJDK"
+# Todo: use sdkman to install java 16
 brew install openjdk
 
 # Configure opensjdk as instructed by 'brew info openjdk'
